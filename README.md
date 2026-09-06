@@ -1,94 +1,107 @@
+<div align="center">
+
 # Dhanush C P
 
 **AI Systems Engineer & Systems Builder** — Bengaluru, India  
-Designing low-latency agent architectures, high-throughput telemetry pipelines, and resilient production systems.
+*Designing low-latency agent architectures, high-throughput telemetry pipelines, and resilient production systems.*
 
-I build software architectures that operate under real-world constraints — from sub-150ms deterministic agent runtimes with OS-level spatial awareness to high-frequency IoT telemetry platforms ingesting raw binary TCP packets. My engineering focus is on deterministic execution over cognitive overhead, strict state synchronization, and observable self-hosted infrastructure.
+<br/>
 
-[Website](https://chandes.in/) · [LinkedIn](https://www.linkedin.com/in/dhanush-c-p/) · [Email](mailto:dhanushchande@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-chandes.in-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chandes.in/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-dhanush--c--p-0284c7?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dhanush-c-p/)
+[![Live Telemetry](https://img.shields.io/badge/Live_System-TrackSavvy-059669?style=for-the-badge&logo=speedtest&logoColor=white)](https://tracksavvy.in)
+[![Email](https://img.shields.io/badge/Email-dhanushchande%40gmail.com-6366f1?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dhanushchande@gmail.com)
 
----
-
-## What I Build
-
-- **Low-Latency Agent Runtimes**: Single-turn deterministic execution pipelines, local OS fast-lanes (<50ms regex dispatch), semantic context pruning (>80% token reduction), and thread-safe WAL memory stores with exponential half-life decay.
-- **Real-Time Telemetry & Systems**: High-frequency industrial GPS socket ingestion (GT06, TK103, JT808), sub-meter PostGIS geofencing, and multi-tier state synchronization surviving mobile network drops.
-- **Multimodal & Generative Pipelines**: Dual audio-visual extraction systems (Video LLaVA + Whisper ASR) and subject-identity-preserving diffusion workflows (OmniGen + LoRA), validated by peer-reviewed research.
+</div>
 
 ---
 
-## Featured Systems & Projects
+### ⚡ Quick Benchmarks & Production Evidence
 
-### 1. Sakura — Desktop Agentic AI Operations Platform
-*Ultra low-latency desktop companion & deterministic execution pipeline*
-
-- **The Problem**: Traditional autonomous agents rely on sluggish, non-deterministic multi-turn cognitive loops and unbounded context windows that bloat latency (>5–10s) and token costs.
-- **What I Built**: A desktop AI assistant with spatial operating system awareness (active window focus, clipboard, screen context) engineered for sub-second execution and minimal memory footprint.
-- **Engineering Highlights**:
-  - **Local Regex Fast Lane (<50ms)**: Bypasses LLM inference entirely for common OS queries and commands.
-  - **OneShotRunner (<150ms)**: Single-turn deterministic parameter extraction powered by Groq LLaMA models, with graceful fallback to a bounded 4-turn ReAct planner only when multi-step synthesis is required.
-  - **Context Pruning Engine**: Dynamically scores and compresses working context, slashing token consumption by **80%+**.
-  - **World-Graph Memory Architecture**: Consolidated thread-safe SQLite database in Write-Ahead Logging (WAL) mode (`sakura.db`) with an exponential 48-hour half-life recency decay and active-directory relevance boosting.
-- **Stack**: Python, FastAPI, Tauri, Svelte, LangChain, SQLite (WAL), Groq (LLaMA 3, Whisper), Kokoro TTS, FAISS
-- **Links**: [Repository](https://github.com/chande-dhanush/Sakura)
-
-### 2. TrackSavvy — Production Fleet Telemetry Platform
-*High-performance fleet intelligence & multi-protocol GPS ingestion engine*
-
-- **The Problem**: Vehicle tracking across fragmented cellular connectivity requires fault-tolerant ingestion of diverse proprietary hardware protocols, real-time geofence alerting, and instant state recovery during network drops.
-- **What I Built**: An end-to-end telemetry and logistics platform operating in self-hosted production for a 50-bus fleet across Bengaluru, covering the entire lifecycle from SIM/TCP configuration to transport manager portals and parent apps.
-- **Engineering Highlights**:
-  - **Multi-Protocol TCP Decoding**: Low-level socket decoders parsing raw binary and ASCII frames from GT06, TK103, and JT808 trackers with monotonic timestamp validation and replay protection.
-  - **Geospatial Time-Series Database**: Optimized partitioned TimescaleDB hypertables and PostGIS geometry, sustaining **288,000+ daily writes** with sub-5ms cache read bounds.
-  - **3-Tier Synchronization Topology**: Combines low-latency WebSockets, in-memory state caching, and database polling to ensure zero state loss across intermittent mobile connectivity.
-  - **Sub-Meter Geofencing**: Polygon boundary triggers for arrival ETAs and student QR boarding rosters with holiday alert suppression.
-- **Stack**: Node.js, TypeScript, TimescaleDB, PostGIS, TCP Sockets, WebSockets, Docker, Nginx, Cloudflare
-- **Links**: [Live Platform](https://tracksavvy.in) · [Portal Login](https://live.tracksavvy.in/login) *(Proprietary Production Platform at Tech Savvy)*
-
-### 3. Multimodal Video Summarization Pipeline
-*Dual-stream audio-visual ingestion & synthesis architecture*
-
-- **The Problem**: Summarizing dynamic video content accurately requires simultaneously capturing fast-moving visual frames and asynchronous audio speech without losing semantic coherence.
-- **What I Built**: An end-to-end multimodal pipeline that decouples visual frame extraction from audio speech channels, synchronizes the modalities, and generates unified summaries. Developed through research at Samsung Research Institute (PRISM Track).
-- **Engineering Highlights**:
-  - Dual-modal architecture combining Video LLaVA visual streams with Whisper ASR speech transcripts.
-  - Integration with Falcons AI text summarization and a reactive interface.
-  - Research outcomes published as a formal **Springer Nature book chapter** on Generative AI; recipient of the **Samsung PRISM Certificate of Excellence**.
-- **Stack**: Python, PyTorch, Video LLaVA, Whisper ASR, Transformers, Falcons AI, React
-- **Links**: [Repository](https://github.com/chande-dhanush/Video-Summarization)
-
-### 4. Subject-Identity-Preservation Pipeline
-*Diffusion-based contextual variation with structural identity lock*
-
-- **The Problem**: Standard diffusion models alter subtle facial features and structural geometry when generating contextual background variations.
-- **What I Built**: A generative vision pipeline using OmniGen and LoRA fine-tuning paradigms to retain subject facial features, proportions, and style consistency across extreme lighting and pose variations.
-- **Stack**: Python, PyTorch, OmniGen, LoRA, Stable Diffusion, Diffusers
-- **Links**: [Repository](https://github.com/chande-dhanush/Subject-Identity-Preservation)
+| Metric / Benchmark | System & Production Context | Engineering Implementation |
+| :--- | :--- | :--- |
+| **288k+ Daily Rows** | **TrackSavvy** (Live 50-Bus Fleet) | Custom binary/ASCII TCP socket decoders, partitioned TimescaleDB hypertables |
+| **< 150ms Latency** | **Sakura** (Desktop Agent Runtime) | Single-turn `OneShotRunner` parameter extraction with `<50ms` OS regex fast-lane |
+| **80%+ Token Saved** | **Sakura** (Context Pruning Engine) | Dynamic semantic context pruning eliminating repetitive multi-turn loop costs |
+| **Springer Nature** | **Samsung PRISM** Research Track | Published Generative AI book chapter on audio-visual multimodal summarization |
 
 ---
 
-## Technical Focus
+## 🛠️ Featured Engineering Systems
+
+### 🔹 [Sakura](https://github.com/chande-dhanush/Sakura) — Desktop Agentic AI Operations Platform
+> **Ultra low-latency desktop companion & deterministic execution pipeline**  
+> `Python` `FastAPI` `Tauri` `Svelte` `SQLite WAL` `Groq (LLaMA 3, Whisper)` `Kokoro TTS`
+
+- **The Problem**: Multi-turn cognitive loops and unbounded context windows create sluggish (>5s) and token-expensive agent interactions.
+- **Architectural Solution**:
+  - **Local Regex Fast Lane (<50ms)**: Bypasses LLM inference entirely for common OS queries & desktop actions.
+  - **OneShotRunner (<150ms)**: Single-turn deterministic parameter extraction via Groq LLaMA models (with fallback to a bounded 4-turn ReAct planner only when required).
+  - **80%+ Token Pruning**: Dynamic relevance scoring compresses working context prior to LLM calls.
+  - **Thread-Safe Memory (`sakura.db`)**: Single SQLite WAL store with an exponential 48-hour half-life decay.
+- **Link**: [📦 Explore GitHub Repository](https://github.com/chande-dhanush/Sakura)
+
+---
+
+### 🔹 TrackSavvy — Production Fleet Telemetry Platform
+> **High-frequency IoT telemetry & multi-protocol GPS ingestion engine**  
+> `Node.js` `TypeScript` `TimescaleDB` `PostGIS` `TCP Sockets` `WebSockets` `Docker` `Cloudflare`
+
+- **The Problem**: Managing vehicle tracking across spotty mobile networks requires zero-loss packet decoding and rapid state synchronization.
+- **Architectural Solution**:
+  - **Multi-Protocol TCP Sockets**: Custom low-level decoders for GT06, TK103, and JT808 trackers with monotonic validation.
+  - **TimescaleDB + PostGIS**: Partitioned hypertables and spatial indexing handling **288k+ daily writes** with sub-5ms cache bounds.
+  - **3-Tier State Sync**: Resilient topology combining WebSockets, in-memory caching, and fallback polling to survive mobile network drops.
+  - **Sub-Meter Geofencing**: Real-time arrival ETA predictions and student QR boarding verification for a 50-bus fleet.
+- **Links**: [🌐 Live Platform (tracksavvy.in)](https://tracksavvy.in) · [🔑 Management Portal](https://live.tracksavvy.in/login) *(Self-Hosted Production Platform)*
+
+---
+
+### 🔹 [Multimodal Video Summarization](https://github.com/chande-dhanush/Video-Summarization) — Dual-Stream Pipeline
+> **Audio-visual frame & speech synthesis architecture**  
+> `PyTorch` `Video LLaVA` `Whisper ASR` `Transformers` `Falcons AI` `React`
+
+- **The Problem**: Summarizing dynamic video content requires simultaneously capturing fast visual changes and continuous audio speech without losing semantic coherence.
+- **Architectural Solution**:
+  - Decoupled multimodal ingestion separating visual frame extraction from audio speech transcripts before joint semantic synthesis.
+  - Research conducted at **Samsung Research Institute (PRISM Track)**, resulting in a **Springer Nature book chapter publication** and **Samsung Certificate of Excellence**.
+- **Link**: [📦 Explore GitHub Repository](https://github.com/chande-dhanush/Video-Summarization)
+
+---
+
+### 🔹 [Subject-Identity-Preservation](https://github.com/chande-dhanush/Subject-Identity-Preservation) — Diffusion Pipeline
+> **Contextual variation engine with structural identity lock**  
+> `PyTorch` `OmniGen` `LoRA` `Stable Diffusion` `Diffusers`
+
+- **The Problem**: Generative image diffusion models distort subtle facial structures and identity when contextual backgrounds vary.
+- **Architectural Solution**:
+  - Built an identity-locking pipeline using OmniGen and LoRA fine-tuning paradigms to retain facial geometry across diverse poses and lighting.
+- **Link**: [📦 Explore GitHub Repository](https://github.com/chande-dhanush/Subject-Identity-Preservation)
+
+---
+
+## 💻 Technical Arsenal
 
 | Domain | Technologies & Implementations |
 | :--- | :--- |
-| **AI & Autonomous Agents** | Single-turn OneShotRunner, Bounded ReAct planning, Semantic context pruning, Memory decay scoring (48h half-life), FAISS vector search, Groq (LLaMA 3, Whisper STT), Gemini API, LangChain |
-| **Backend & Systems** | FastAPI (Async), Node.js, TypeScript, Python, Rust (systems exploration), SQLite (WAL mode + RLock), TCP binary sockets, WebSockets, Tauri desktop IPC |
-| **Data & Telemetry** | TimescaleDB (partitioned hypertables), PostGIS (spatial geometry & geofencing), PostgreSQL, Raw packet decoding (GT06, JT808, TK103) |
-| **Infrastructure & DevOps** | Docker, Self-hosted Linux environments, Cloudflare Tunnels, Nginx, n8n workflow automation, AWS |
-| **Frontend & Clients** | Svelte, React, Tailwind CSS |
+| **AI & Autonomous Agents** | Single-turn `OneShotRunner`, Bounded ReAct, Context Pruning, Memory Half-Life Decay, FAISS, Groq (LLaMA 3, Whisper), Gemini API |
+| **Backend & Systems** | FastAPI (Async Python), Node.js, TypeScript, Rust (`evie`), SQLite (WAL mode + RLock), TCP Sockets, WebSockets, Tauri IPC |
+| **Data & Telemetry** | TimescaleDB (partitioned hypertables), PostGIS (spatial geometry), PostgreSQL, Industrial Protocol Decoders (GT06, JT808, TK103) |
+| **DevOps & Infrastructure** | Docker, Self-Hosted Linux, Cloudflare Tunnels, Nginx, n8n Automation, AWS |
+| **Frontend** | Svelte, React, Tailwind CSS |
 
 ---
 
-## Currently Exploring
+## 🔬 Currently Exploring
 
-- **Low-level systems programming in Rust** (`evie` project) for deterministic, zero-overhead memory and concurrency management in streaming engines.
-- **Deterministic local agent runtimes** — exploring smaller distilled local models (<3B parameters) paired with strict AST/regex routers to further decrease agent execution latency on consumer hardware.
+- **Systems-level Rust** (`evie`): Low-overhead memory safety and concurrency patterns for high-throughput streaming pipelines.
+- **Edge Agent Architectures**: Micro-LLMs (<3B) integrated with deterministic AST/regex routing for ultra low-latency on-device execution.
 
 ---
 
-## Verified Links & Contact
+## 📬 Connect
 
-- **Website**: [chandes.in](https://chandes.in/)
-- **LinkedIn**: [linkedin.com/in/dhanush-c-p](https://www.linkedin.com/in/dhanush-c-p/)
-- **Live System**: [tracksavvy.in](https://tracksavvy.in)
-- **Direct Email**: [dhanushchande@gmail.com](mailto:dhanushchande@gmail.com)
+- 🌐 **Portfolio**: [chandes.in](https://chandes.in/)
+- 💼 **LinkedIn**: [linkedin.com/in/dhanush-c-p](https://www.linkedin.com/in/dhanush-c-p/)
+- 📍 **Location**: Bengaluru, Karnataka, India
+- ✉️ **Direct Email**: [dhanushchande@gmail.com](mailto:dhanushchande@gmail.com)
