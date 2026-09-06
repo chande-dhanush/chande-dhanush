@@ -85,7 +85,7 @@
 | Domain | Technologies & Implementations |
 | :--- | :--- |
 | **AI & Autonomous Agents** | Single-turn `OneShotRunner`, Bounded ReAct, Context Pruning, Memory Half-Life Decay, FAISS, Groq (LLaMA 3, Whisper), Gemini API |
-| **Backend & Systems** | FastAPI (Async Python), Node.js, TypeScript, Rust (`evie`), SQLite (WAL mode + RLock), TCP Sockets, WebSockets, Tauri IPC |
+| **Backend & Systems** | FastAPI (Async Python), Node.js, TypeScript, SQLite (WAL mode + RLock), TCP Sockets, WebSockets, Tauri IPC |
 | **Data & Telemetry** | TimescaleDB (partitioned hypertables), PostGIS (spatial geometry), PostgreSQL, Industrial Protocol Decoders (GT06, JT808, TK103) |
 | **DevOps & Infrastructure** | Docker, Self-Hosted Linux, Cloudflare Tunnels, Nginx, n8n Automation, AWS |
 | **Frontend** | Svelte, React, Tailwind CSS |
@@ -94,8 +94,9 @@
 
 ## 🔬 Currently Exploring
 
-- **Systems-level Rust** (`evie`): Low-overhead memory safety and concurrency patterns for high-throughput streaming pipelines.
-- **Edge Agent Architectures**: Micro-LLMs (<3B) integrated with deterministic AST/regex routing for ultra low-latency on-device execution.
+- **Scaling TrackSavvy Telemetry**: Expanding real-time fleet intelligence, automated arrival notification engines, and high-frequency route analytics in production.
+- **Agentic IDEs & Developer Tooling**: Deep-diving into code-native AI developer environments — building custom autonomous skills, workspace rules, and Model Context Protocol (MCP) server integrations.
+- **Deterministic Edge Runtimes**: Integrating compact distilled models with AST/regex fast-lanes for ultra-responsive local agent execution.
 
 ---
 
