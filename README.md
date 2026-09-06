@@ -9,10 +9,18 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-chandes.in-10b981?style=for-the-badge&logo=googlechrome&logoColor=white)](https://chandes.in/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-dhanush--c--p-0284c7?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dhanush-c-p/)
-[![Live Telemetry](https://img.shields.io/badge/Live_System-TrackSavvy-059669?style=for-the-badge&logo=speedtest&logoColor=white)](https://tracksavvy.in)
+[![Live Telemetry](https://img.shields.io/badge/Live_System-Track_Savvy-059669?style=for-the-badge&logo=speedtest&logoColor=white)](https://tracksavvy.in)
 [![Email](https://img.shields.io/badge/Email-dhanushchande%40gmail.com-6366f1?style=for-the-badge&logo=gmail&logoColor=white)](mailto:dhanushchande@gmail.com)
 
 </div>
+
+---
+
+## 📌 Executive Summary
+
+I design and build complete software architectures operating under real-world physical and computational constraints. My core focus spans **low-latency autonomous agent runtimes** and **high-throughput industrial IoT telemetry platforms**.
+
+Rather than treating AI as an isolated black box, I engineer systems around it—focusing on deterministic single-turn execution, semantic context pruning, spatial OS awareness, and fault-tolerant state synchronization over unstable networks. Currently a Software Engineer at **Tech Savvy** owning the Track Savvy telematics infrastructure, architect of **Sakura**, and published Generative AI researcher with **Springer Nature** from work at **Samsung Research Institute**.
 
 ---
 
