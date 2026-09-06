@@ -20,7 +20,7 @@
 
 | Metric / Benchmark | System & Production Context | Engineering Implementation |
 | :--- | :--- | :--- |
-| **288k+ Daily Rows** | **TrackSavvy** (Live 50-Bus Fleet) | Custom binary/ASCII TCP socket decoders, partitioned TimescaleDB hypertables |
+| **288k+ Daily Rows** | **Track Savvy** (Live 50-Bus Fleet) | Custom binary/ASCII TCP socket decoders, partitioned TimescaleDB hypertables |
 | **< 150ms Latency** | **Sakura** (Desktop Agent Runtime) | Single-turn `OneShotRunner` parameter extraction with `<50ms` OS regex fast-lane |
 | **80%+ Token Saved** | **Sakura** (Context Pruning Engine) | Dynamic semantic context pruning eliminating repetitive multi-turn loop costs |
 | **Springer Nature** | **Samsung PRISM** Research Track | Published Generative AI book chapter on audio-visual multimodal summarization |
@@ -43,7 +43,7 @@
 
 ---
 
-### 🔹 TrackSavvy — Production Fleet Telemetry Platform
+### 🔹 Track Savvy — Production Fleet Telemetry Platform
 > **High-frequency IoT telemetry & multi-protocol GPS ingestion engine**  
 > `Node.js` `TypeScript` `TimescaleDB` `PostGIS` `TCP Sockets` `WebSockets` `Docker` `Cloudflare`
 
@@ -94,7 +94,7 @@
 
 ## 🔬 Currently Exploring
 
-- **Scaling TrackSavvy Telemetry**: Expanding real-time fleet intelligence, automated arrival notification engines, and high-frequency route analytics in production.
+- **Scaling Track Savvy Telemetry**: Expanding real-time fleet intelligence, automated arrival notification engines, and high-frequency route analytics in production.
 - **Agentic IDEs & Developer Tooling**: Deep-diving into code-native AI developer environments — building custom autonomous skills, workspace rules, and Model Context Protocol (MCP) server integrations.
 - **Deterministic Edge Runtimes**: Integrating compact distilled models with AST/regex fast-lanes for ultra-responsive local agent execution.
 
